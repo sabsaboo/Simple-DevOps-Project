@@ -1,8 +1,6 @@
 # Install Jenkins on AWS EC2
 Jenkins is a self-contained Java-based program, ready to run out-of-the-box, with packages for Windows, Mac OS X and other Unix-like operating systems. As an extensible automation server, Jenkins can be used as a simple CI server or turned into the continuous delivery hub for any project.
 
-### Follow this artical [On YouTube Channel](https://youtu.be/ERR7cqW28FY)
-
 ### Prerequisites
 1. EC2 Instance 
    - With Internet Access
@@ -51,11 +49,4 @@ Jenkins is a self-contained Java-based program, ready to run out-of-the-box, wit
 - Create another admin user id
 
 ### Test Jenkins Jobs
-1. Create “new item”
-1. Enter an item name – `My-First-Project`
-   - Chose `Freestyle` project
-1. Under the Build section
-	Execute shell: echo "Welcome to Jenkins Demo"
-1. Save your job 
-1. Build job
-1. Check "console output"
+

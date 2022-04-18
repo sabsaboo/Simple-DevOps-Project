@@ -36,17 +36,17 @@
 1. Create a Route53 private hosted zone (you can create Public hosted zone if you have a domain)
    ```sh
    Routeh53 --> hosted zones --> created hosted zone  
-   Domain Name: valaxy.net
+   Domain Name: cistec.net
    Type: Private hosted zone for Amzon VPC
    ```
 
 1. create an S3 bucket
    ```sh
-    aws s3 mb s3://demo.k8s.valaxy.net
+    aws s3 mb s3://demo.k8s.cistec.net
    ```
 1. Expose environment variable:
    ```sh
-    export KOPS_STATE_STORE=s3://demo.k8s.valaxy.net
+    export KOPS_STATE_STORE=s3://demo.k8s.cistec.net
    ```
 
 1. Create sshkeys before creating cluster
@@ -56,7 +56,7 @@
 
 1. Create kubernetes cluster definitions on S3 bucket
    ```sh
-   kops create cluster --cloud=aws --zones=ap-south-1b --name=demo.k8s.valaxy.net --dns-zone=valaxy.net --dns private 
+   kops create cluster --cloud=aws --zones=ap-south-1b --name=demo.k8s.cistec.net --dns-zone=cistec.net --dns private 
     ```
 
 1. If you wish to update the cluster worker node sizes use below command 
@@ -66,7 +66,7 @@
 
 1. Create kubernetes cluser
     ```sh
-    kops update cluster demo.k8s.valaxy.net --yes
+    kops update cluster demo.k8s.cistec.net --yes
     ```
 
 1. Validate your cluster
@@ -81,7 +81,7 @@
 
 1. To delete cluster
     ```sh
-     kops delete cluster demo.k8s.valaxy.net --yes
+     kops delete cluster demo.k8s.cistec.net --yes
     ```
    
 #### Deploying Nginx pods on Kubernetes
